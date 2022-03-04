@@ -25,10 +25,9 @@
     <!-- <meta http-equiv="refresh" content="30" /> -->
 
     <!-- font awesome link -->
-    <script
-      src="https://kit.fontawesome.com/e8a3ccd4f0.js"
-      crossorigin="anonymous"
-    ></script>
+    
+    <script src="https://kit.fontawesome.com/e8a3ccd4f0.js" crossorigin="anonymous"></script>
+    
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="css/style1.css" />
@@ -212,23 +211,26 @@
                   </a>
                 </li>
                 <li>
-                  <select name="filterLiCurrency" id="filterLiCurrency">
-                    <option value="usd">USD</option>
-                    <option value="amd">AMD</option>
-                    <option value="eur">EUR</option>
-                  </select>
+                  <div class="currencyTop">
+                    <select name="filterLiCurrency" id="filterLiCurrency">
+                      <option value="usd">USD</option>
+                      <option value="amd">AMD</option>
+                      <option value="eur">EUR</option>
+                    </select>
+                  </div>
+                  
                 </li>
               </ul>
             </div>
           </div>
           <div class="form_main">
             <div class="form_main_left">
+
+
               <form action="#" class="form_block">
                 <div class="form_search_row_top">
-                  <div class="selects_box">
-                    <div>
-
-                    </div>
+                  <div class="selects_box_arrow">
+                    
                     <label for="renting">Renting</label>
                     <select name="renting" id="renting" >
                       <option value="select">Select</option>
@@ -236,13 +238,13 @@
                       <option value="monthly">Monthly</option>
                     </select>
                   </div>
-                  <div class="selects_box">
+                  <div class="selects_box_arrow">
                     <label for="city">City</label>
                     <select name="city" id="city" >
                       <option value="erevan">Erevan</option>
                     </select>
                   </div>
-                  <div class="selects_box">
+                  <div class="selects_box_arrow">
                     <label for="renting">Region</label>
                     <select name="region" id="region" >
                       <option value="avan">Avan</option>
@@ -260,7 +262,7 @@
                       <option value="kanaker-zeytun">Kanaker-Zeytun</option>
                     </select>
                   </div>
-                  <div class="selects_box">
+                  <div class="selects_box_arrow">
                     <label for="rooms">Rooms</label>
                     <select name="rooms" id="rooms" >
                       <option value="studio-apt">StudioApt</option>
@@ -289,7 +291,7 @@
                     />
                   </div>
 
-                  <div class="selects_box price_box_second">
+                  <div class="selects_box price_box_second" >
                     <label for="price" id="price-second"></label>
                     <input
                       type="number"
@@ -301,7 +303,7 @@
                     />
                   </div>
 
-                  <div class="selects_box">
+                  <div class="selects_box" >
                     <label for="code">Code</label>
                     <input
                       type="text"
@@ -311,7 +313,7 @@
                     />
                   </div>
 
-                  <div class="selects_box">
+                  <div class="selects_box_arrow">
                     <label for="layout">Layout</label>
                     <select name="layout" id="layout" >
                       <option value="special-project">Special Project</option>
@@ -322,6 +324,9 @@
                       <option value="stalin-project">Stalin Project</option>
                     </select>
                   </div>
+
+
+
                 </div>
               </form>
             </div>
