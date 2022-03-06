@@ -24,18 +24,18 @@ body {
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 992px) {
   .page_header {
     display: block;
     width: 100%;
+    padding: 0;
   }
 }
 
 .header_logo {
-  display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
@@ -52,11 +52,6 @@ body {
   height: auto;
 }
 
-.header_menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 @media screen and (max-width: 992px) {
   .header_menu {
     display: none;
@@ -71,11 +66,11 @@ body {
   .header_menu_lists {
     display: block;
     text-align: center;
-    width: 100%;
   }
 }
 .header_menu_lists li {
   text-transform: uppercase;
+  padding-right: 8px;
 }
 @media screen and (max-width: 992px) {
   .header_menu_lists li {
@@ -83,8 +78,8 @@ body {
   }
 }
 
-.header_menu_lists li:not(.last) {
-  padding-right: 8px;
+.last_li {
+  padding-right: 0 !important;
 }
 
 .header_menu_lists li a {
@@ -100,12 +95,13 @@ body {
   color: #ffd078;
   text-decoration: underline;
 }
-/* ____________________________ */
 
 /* Burger menu  */
 
 .burger_menu_block {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 992px) {
   .burger_menu_block {
@@ -116,13 +112,12 @@ body {
 .burger_menu_box {
   background-color: #6e7f80;
   display: none;
-  height: auto;
   position: absolute;
   animation: myBurgerMenu 2s forwards;
 }
 @keyframes myBurgerMenu {
   from {
-    width: 30%;
+    width: 35%;
   }
   to {
     width: 100%;
@@ -134,11 +129,12 @@ body {
 }
 
 .menu_btn {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
   background: none;
   border: 0;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0 20px;
 }
 .menu_btn:hover + .burger_menu_box {
   display: block;
@@ -146,15 +142,15 @@ body {
 
 .burger_icon {
   position: relative;
-  margin: 10px;
+  margin: 10px 0;
 }
 .burger_icon,
 .burger_icon:before,
 .burger_icon:after {
+  background-color: var(--grey);
   display: block;
   width: 30px;
   height: 3px;
-  background-color: var(--grey);
 }
 .burger_icon:before,
 .burger_icon:after {
@@ -167,11 +163,10 @@ body {
 .burger_icon:after {
   top: 8px;
 }
-/* ____________________________ */
+
 /* Page wrapper section  */
 .page_wrapper_section img {
   width: 100%;
-  height: auto;
 }
 
 /* Page main section  */
@@ -179,20 +174,19 @@ body {
 .main_section {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 @media screen and (max-width: 992px) {
   .main_section {
-    width: 100%;
+    padding: 0 20px;
   }
 }
-.main_title_box {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+
 
 @media screen and (max-width: 992px) {
   .main_title_box {
     max-width: 480px;
+    margin: 0 auto;
   }
 }
 .main_title_txt {
@@ -203,22 +197,9 @@ body {
   text-align-last: center;
 }
 
-/* @media screen and (max-width: 992px) {
-  .main_title_txt {
-    padding: 0 100px;
-  }
-} */
+
 
 /* Page main info section  */
-.main_info_box {
-  max-width: 1000px;
-}
-
-@media screen and (max-width: 992px) {
-  .main_info_box {
-    width: 100%;
-  }
-}
 
 .main_info {
   display: flex;
@@ -236,34 +217,29 @@ body {
 }
 @media screen and (max-width: 992px) {
   .main_info_img_box {
-    width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 }
 
 .main_info_img_box img {
   border-radius: 10px;
   width: 480px;
-  height: auto;
 }
 
 @media screen and (max-width: 992px) {
   .main_info_img_box img {
     max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
   }
 }
 
-.main_info_block:not(.reversed_info) {
+.main_info_block {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-left: 100px;
 }
 @media screen and (max-width: 992px) {
   .main_info_block:not(.reversed_info) {
-    width: 100%;
     margin: 0 auto;
     align-items: center;
   }
@@ -271,23 +247,23 @@ body {
 
 .reversed {
   flex-direction: row-reverse;
-
   margin: 50px 0;
+  
 }
 @media screen and (max-width: 992px) {
   .reversed {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
 }
 .reversed_info {
-  max-width: 900px;
-  margin-right: 100px;
+ margin: 0 100px 0 0;
 }
 
 @media screen and (max-width: 992px) {
   .reversed_info {
-    width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -313,13 +289,19 @@ body {
 }
 
 .main_info_btn {
-  width: 115px;
+  width: max-content;
   background-color: #ffd078;
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  padding: 10px 20px;
+  color: black;
+  font-weight: bold;
+  line-height: 10px;
+  padding: 15px 25px ;
   text-transform: uppercase;
+  text-decoration: none;
+  
+  
 }
 .main_info_btn:hover {
   background-color: #ffd010;
@@ -347,7 +329,7 @@ body {
 @media screen and (max-width: 992px) {
   .footer_div {
     width: 100%;
-    max-width: 500px;
+    padding: 0 20px;
   }
 }
 
