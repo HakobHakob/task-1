@@ -11,9 +11,6 @@ body {
 :root {
   --lgrey: #f1f1f3;
   --grey: #878b98;
-  --select-border: #777;
-  --select-focus: blue;
-  --select-arrow: var(--select-border);
 }
 
 /* Page header  */
@@ -27,18 +24,18 @@ body {
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 992px) {
   .page_header {
     display: block;
     width: 100%;
+    padding: 0;
   }
 }
 
 .header_logo {
-  display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
 }
@@ -55,11 +52,6 @@ body {
   height: auto;
 }
 
-.header_menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 @media screen and (max-width: 992px) {
   .header_menu {
     display: none;
@@ -74,11 +66,11 @@ body {
   .header_menu_lists {
     display: block;
     text-align: center;
-    width: 100%;
   }
 }
 .header_menu_lists li {
   text-transform: uppercase;
+  padding-right: 8px;
 }
 @media screen and (max-width: 992px) {
   .header_menu_lists li {
@@ -86,8 +78,8 @@ body {
   }
 }
 
-.header_menu_lists li:not(.last) {
-  padding-right: 8px;
+.last_li {
+  padding-right: 0 !important;
 }
 
 .header_menu_lists li a {
@@ -103,12 +95,13 @@ body {
   color: #ffd078;
   text-decoration: underline;
 }
-/* ____________________________ */
 
 /* Burger menu  */
 
 .burger_menu_block {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 992px) {
   .burger_menu_block {
@@ -119,14 +112,12 @@ body {
 .burger_menu_box {
   background-color: #6e7f80;
   display: none;
-  height: auto;
-  margin: 0 auto;
   position: absolute;
   animation: myBurgerMenu 2s forwards;
 }
 @keyframes myBurgerMenu {
   from {
-    width: 10%;
+    width: 35%;
   }
   to {
     width: 100%;
@@ -138,11 +129,12 @@ body {
 }
 
 .menu_btn {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
   background: none;
   border: 0;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0 20px;
 }
 .menu_btn:hover + .burger_menu_box {
   display: block;
@@ -150,15 +142,15 @@ body {
 
 .burger_icon {
   position: relative;
-  margin: 10px;
+  margin: 10px 0;
 }
 .burger_icon,
 .burger_icon:before,
 .burger_icon:after {
+  background-color: var(--grey);
   display: block;
   width: 30px;
   height: 3px;
-  background-color: var(--grey);
 }
 .burger_icon:before,
 .burger_icon:after {
@@ -178,6 +170,14 @@ body {
 .main_block {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .main_block {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 
 .form_container {
@@ -188,30 +188,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 992px) {
   .form_top {
     flex-direction: column;
-    justify-content: center;
+    padding: 0 10px;
   }
 }
 
 div[class*="_top_"] {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@media screen and (max-width: 992px) {
-  div[class*="_top_"] {
-    width: 100%;
-    justify-content: center;
-  }
-  div[class*="_top_left"] {
-    margin-bottom: 20px;
-  }
+  padding: 10px 0;
 }
 
 .form_top ul {
@@ -238,52 +225,48 @@ div[class*="_top_"] {
   border-bottom: 2px solid #ffd078 !important;
 }
 
-
-#filterLiCurrency{
-  
-}
-
-
-
 #filterLiCurrency {
   appearance: none;
-  color:grey;
+  color: grey;
+  cursor:pointer;
   width: 70px;
   font-size: 13px;
   border: 1px solid #979ba5;
   border-radius: 100px;
-  padding: 7px;
+  padding: 8px;
   outline: none;
   margin: 0 auto;
 }
 
-.currencyTop{
+.currencyTop {
   position: relative;
 }
 
-.currencyTop::after{
-  content: "\25BC";
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    pointer-events: none;
-    display: inline;
-    color: grey;
-    font-size: 9px;
+.currencyTop::after {
+  content: "\f0d7";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  padding: 10px 5px;
+  pointer-events: none;
+  display: inline;
+  color: grey;
+  font-size: 13px;
+}
+.currencyTop:hover::after {
+  color: #f39c12;
 }
 
 /* Form main section  */
 .form_main {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 992px) {
   .form_main {
     flex-direction: column;
-    padding: 0 10px;
   }
 }
 
@@ -314,7 +297,8 @@ div[class*="search_row"] {
   }
 }
 
-.selects_box_arrow,.selects_box {
+.selects_box_arrow,
+.selects_box {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -327,28 +311,29 @@ div[class*="search_row"] {
   }
 }
 
-body option{
-  background-color: aqua;
-  
-}
+
 
 .selects_box_arrow > label,
 .selects_box label {
   color: #979ba5;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
-
-
-.selects_box_arrow select,
-.selects_box input {
+.selects_box_arrow select {
   appearance: none;
   background-color: transparent;
   outline: none;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .selects_box_arrow select,
-   input {
+input {
   width: 170px;
   height: 35px;
   border: 1px solid var(--grey);
@@ -360,21 +345,41 @@ body option{
   outline: none;
 }
 
+
+
 .selects_box_arrow::after {
-  content: "\25BC";
-  color: grey;
-  font-size: 9px;
+    content: "\f0d7";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     position: absolute;
-    top: 50%;
-    right: 0;
-    width: 20px;
+    bottom: 0;
+    right: 10px;
     padding: 10px;
     pointer-events: none;
-    
-    
+    display: inline;
+    color: grey;
+    font-size: 13px;
+}
+.selects_box_arrow:hover::after {
+  color: #f39c12;
 }
 
-
+.price_box_input::after{
+  content: "\f0dc";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 10px;
+    pointer-events: none;
+    display: inline;
+    color: grey;
+    font-size: 13px;
+}
+.price_box_input:hover::after {
+  color: #f39c12;
+}
 
 /* ______________________ */
 
@@ -413,31 +418,19 @@ body option{
 }
 
 /* Information container  */
-.info_container_section {
-  max-width: 1000px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-@media screen and (max-width: 992px) {
-  .info_container_section {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
 
 .info_container_block {
   display: flex;
   justify-content: space-around;
-  padding: 15px;
+  padding: 20px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  border-radius: 20px;
-  margin: 50px 0;
+  border-radius: 10px;
+  margin: 20px 0;
 }
 @media screen and (max-width: 992px) {
   .info_container_block {
     display: grid;
     grid-template-columns: auto;
-    margin: 10px 0;
   }
 }
 
@@ -453,22 +446,21 @@ body option{
 }
 
 .info_section_left > img {
-  width: 100%;
-  max-height: 300px;
-  min-width: 80%;
-  border-radius: 20px;
+  width: 480px;
+  max-width: 100%;
+  border-radius: 10px;
 }
 
 .info_section_right {
   display: grid;
   grid-template-columns: auto;
   width: 50%;
-  margin: 0 20px;
+  padding: 0 20px;
 }
 @media screen and (max-width: 992px) {
   .info_section_right {
     width: 100%;
-    margin: 20px auto;
+    padding: 10px 0;
   }
 }
 
@@ -546,25 +538,28 @@ span[class*="col_link_color"],
 }
 
 .description_rent_btn {
-  width: 100px;
-  height: 40px;
+  
   background-color: #ffd078;
   border-radius: 100px;
   border: none;
-  outline: none;
+  padding: 10px 20px;
   cursor: pointer;
+  color: black;
+  font-weight: bold;  
   position: absolute;
   right: 0;
-  bottom: 10px;
+  bottom: 0;
+  outline: none;
   text-transform: uppercase;
-  font-weight: bold;
+  text-decoration: none;
+  
 }
 .description_rent_btn:hover {
   background-color: #fcb83a;
 }
 @media screen and (max-width: 992px) {
   .description_rent_btn {
-    position: relative;
+    width: max-content;
     bottom: 0;
     margin-top: 20px;
   }
@@ -591,7 +586,7 @@ span[class*="col_link_color"],
 @media screen and (max-width: 992px) {
   .footer_div {
     width: 100%;
-    max-width: 500px;
+    padding: 0 20px;
   }
 }
 
