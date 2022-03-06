@@ -21,14 +21,18 @@
     <!-- Eji hexinaki anun  -->
     <meta name="Hakob Beglaryan" content="Task 2 /Elate/" />
 
+   
+
     <!-- Ejy amen 30 vayrkyan@ mek tarmacnelu tag  -->
     <!-- <meta http-equiv="refresh" content="30" /> -->
 
     <!-- font awesome link -->
-    
-    <script src="https://kit.fontawesome.com/e8a3ccd4f0.js" crossorigin="anonymous"></script>
-    
 
+    <script
+      src="https://kit.fontawesome.com/e8a3ccd4f0.js"
+      crossorigin="anonymous"
+    ></script>
+    
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="css/style1.css" />
 
@@ -218,35 +222,33 @@
                       <option value="eur">EUR</option>
                     </select>
                   </div>
-                  
                 </li>
               </ul>
             </div>
           </div>
           <div class="form_main">
             <div class="form_main_left">
-
-
               <form action="#" class="form_block">
                 <div class="form_search_row_top">
                   <div class="selects_box_arrow">
-                    
                     <label for="renting">Renting</label>
-                    <select name="renting" id="renting" >
+                    <select name="renting" id="renting" class="options_bg">
                       <option value="select">Select</option>
                       <option value="daily">Daily</option>
                       <option value="monthly">Monthly</option>
                     </select>
+                    <span class="focus"></span>
                   </div>
                   <div class="selects_box_arrow">
                     <label for="city">City</label>
-                    <select name="city" id="city" >
+                    <select name="city" id="city" class="options_bg">
                       <option value="erevan">Erevan</option>
                     </select>
+                    <span class="focus"></span>
                   </div>
                   <div class="selects_box_arrow">
                     <label for="renting">Region</label>
-                    <select name="region" id="region" >
+                    <select name="region" id="region" class="options_bg">
                       <option value="avan">Avan</option>
                       <option value="ajapnyak">Ajapnyak</option>
                       <option value="arabkir">Arabkir</option>
@@ -261,10 +263,11 @@
                       <option value="vahagni">Vahagni</option>
                       <option value="kanaker-zeytun">Kanaker-Zeytun</option>
                     </select>
+                    <span class="focus"></span>
                   </div>
                   <div class="selects_box_arrow">
                     <label for="rooms">Rooms</label>
-                    <select name="rooms" id="rooms" >
+                    <select name="rooms" id="rooms" class="options_bg">
                       <option value="studio-apt">StudioApt</option>
                       <option value="bedroom-1">1 Bedroom</option>
                       <option value="bedroom-2">2 Bedrooms</option>
@@ -274,11 +277,12 @@
                       <option value="bedroom-6">6 Bedrooms</option>
                       <option value="bedroom-7">7 Bedrooms+</option>
                     </select>
+                    <span class="focus"></span>
                   </div>
                 </div>
 
                 <div class="form_search_row_bottom">
-                  <div class="selects_box">
+                  <div class="selects_box price_box_input">
                     <label for="price">Price</label>
 
                     <input
@@ -288,10 +292,12 @@
                       min="0"
                       max="100"
                       placeholder="$100"
+                      class="options_bg"
                     />
+                    <span class="focus"></span>
                   </div>
 
-                  <div class="selects_box price_box_second" >
+                  <div class="selects_box price_box_input">
                     <label for="price" id="price-second"></label>
                     <input
                       type="number"
@@ -300,22 +306,26 @@
                       min="1"
                       max="100"
                       placeholder="$100"
+                      class="options_bg"
                     />
+                    <span class="focus"></span>
                   </div>
 
-                  <div class="selects_box" >
+                  <div class="selects_box">
                     <label for="code">Code</label>
                     <input
                       type="text"
                       id="code"
                       name="code"
                       placeholder="RCEA3248"
+                      class="options_bg"
                     />
+                    <span class="focus"></span>
                   </div>
 
                   <div class="selects_box_arrow">
                     <label for="layout">Layout</label>
-                    <select name="layout" id="layout" >
+                    <select name="layout" id="layout">
                       <option value="special-project">Special Project</option>
                       <option value="new-building">New Building</option>
                       <option value="post-khrushchev-project">
@@ -324,9 +334,6 @@
                       <option value="stalin-project">Stalin Project</option>
                     </select>
                   </div>
-
-
-
                 </div>
               </form>
             </div>
@@ -339,204 +346,204 @@
           </div>
         </section>
 
+        <!-- Information container  -->
         <section class="info_container">
-          <div class="info_container_section">
-            <div class="info_container_block">
-              <div class="info_section_left">
-                <img src="img/appartmentsImg/room 1.jfif" alt="Image 1" />
+          <div class="info_container_block">
+            <div class="info_section_left">
+              <img src="img/appartmentsImg/room 1.jfif" alt="Image 1" />
+            </div>
+            <div class="info_section_right">
+              <div class="info_heading_row">
+                <h1 class="info_header">bayron</h1>
+                <span class="info_street_name">
+                  <a href="#" class="info_street_link">Yerevan</a>
+                  <span class="slesh">/</span>
+                  <a href="#" class="info_street_link">Centre</a>
+                </span>
               </div>
-              <div class="info_section_right">
-                <div class="info_heading_row">
-                  <h1 class="info_header">bayron</h1>
-                  <span class="info_street_name">
-                    <a href="#" class="info_street_link">Yerevan</a>
-                    <span class="slesh">/</span>
-                    <a href="#" class="info_street_link">Centre</a>
-                  </span>
+              <div class="info_description_row">
+                <div class="description_column_first">
+                  <p class="col_features_title">features</p>
+                  <ul class="col_features_table">
+                    <li class="col_features_list">3 Bedrooms</li>
+                    <li class="col_features_list">5/3 Floor</li>
+                    <li class="col_features_list">200 sqm</li>
+                    <li class="col_features_list">New Building</li>
+                  </ul>
                 </div>
-                <div class="info_description_row">
-                  <div class="description_column_first">
-                    <p class="col_features_title">features</p>
-                    <ul class="col_features_table">
-                      <li class="col_features_list">3 Bedrooms</li>
-                      <li class="col_features_list">5/3 Floor</li>
-                      <li class="col_features_list">200 sqm</li>
-                      <li class="col_features_list">New Building</li>
-                    </ul>
-                  </div>
-                  <div class="description_column_second">
-                    <p class="col_title">monthly</p>
-                    <span class="second_col_link_color">2.900</span>
-                    <span>&nbsp;</span>
-                    <span class="price_currency">usd</span>
-                  </div>
-                  <div class="description_column_third">
-                    <p class="col_title">
-                      code:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">RCEA3248</a>
-                      </span>
-                    </p>
-                    <p class="col_title">
-                      updated:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">14.06.2021</a>
-                      </span>
-                    </p>
-                  </div>
+                <div class="description_column_second">
+                  <p class="col_title">monthly</p>
+                  <span class="second_col_link_color">2.900</span>
+                  <span>&nbsp;</span>
+                  <span class="price_currency">usd</span>
                 </div>
-                <div class="description_btn_box">
-                  <button class="description_rent_btn">rent</button>
+                <div class="description_column_third">
+                  <p class="col_title">
+                    code:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">RCEA3248</a>
+                    </span>
+                  </p>
+                  <p class="col_title">
+                    updated:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">14.06.2021</a>
+                    </span>
+                  </p>
                 </div>
+              </div>
+              <div class="description_btn_box">
+                <a href="living.html" rel="noopener noreferrer" class="description_rent_btn">rent</a>
               </div>
             </div>
-            <div class="info_container_block">
-              <div class="info_section_left">
-                <img src="img/appartmentsImg/room 2.jfif" alt="Image 2" />
+          </div>
+          <div class="info_container_block">
+            <div class="info_section_left">
+              <img src="img/appartmentsImg/room 2.jfif" alt="Image 2" />
+            </div>
+            <div class="info_section_right">
+              <div class="info_heading_row">
+                <h1 class="info_header">teryan</h1>
+                <span class="info_street_name">
+                  <a href="#" class="info_street_link">Yerevan</a>
+                  <span class="slesh">/</span>
+                  <a href="#" class="info_street_link">Centre</a>
+                </span>
               </div>
-              <div class="info_section_right">
-                <div class="info_heading_row">
-                  <h1 class="info_header">teryan</h1>
-                  <span class="info_street_name">
-                    <a href="#" class="info_street_link">Yerevan</a>
-                    <span class="slesh">/</span>
-                    <a href="#" class="info_street_link">Centre</a>
-                  </span>
+              <div class="info_description_row">
+                <div class="description_column_first">
+                  <p class="col_features_title">features</p>
+                  <ul class="col_features_table">
+                    <li class="col_features_list">3 Bedrooms</li>
+                    <li class="col_features_list">5/3 Floor</li>
+                    <li class="col_features_list">200 sqm</li>
+                    <li class="col_features_list">New Building</li>
+                  </ul>
                 </div>
-                <div class="info_description_row">
-                  <div class="description_column_first">
-                    <p class="col_features_title">features</p>
-                    <ul class="col_features_table">
-                      <li class="col_features_list">3 Bedrooms</li>
-                      <li class="col_features_list">5/3 Floor</li>
-                      <li class="col_features_list">200 sqm</li>
-                      <li class="col_features_list">New Building</li>
-                    </ul>
-                  </div>
-                  <div class="description_column_second">
-                    <p class="col_title">monthly</p>
-                    <span class="second_col_link_color">1.200</span>
-                    <span>&nbsp;</span>
-                    <span class="price_currency">usd</span>
-                  </div>
-                  <div class="description_column_third">
-                    <p class="col_title">
-                      code:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">RCEA3248</a>
-                      </span>
-                    </p>
-                    <p class="col_title">
-                      updated:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">14.06.2021</a>
-                      </span>
-                    </p>
-                  </div>
+                <div class="description_column_second">
+                  <p class="col_title">monthly</p>
+                  <span class="second_col_link_color">1.200</span>
+                  <span>&nbsp;</span>
+                  <span class="price_currency">usd</span>
                 </div>
+                <div class="description_column_third">
+                  <p class="col_title">
+                    code:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">RCEA3248</a>
+                    </span>
+                  </p>
+                  <p class="col_title">
+                    updated:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">14.06.2021</a>
+                    </span>
+                  </p>
+                </div>
+              </div>
 
-                <div class="description_btn_box">
-                  <button class="description_rent_btn">rent</button>
-                </div>
+              <div class="description_btn_box">
+                <a href="living.html" rel="noopener noreferrer" class="description_rent_btn">rent</a>
               </div>
             </div>
+          </div>
 
-            <div class="info_container_block">
-              <div class="info_section_left">
-                <img src="img/appartmentsImg/room 3.jpg" alt="Image 3" />
+          <div class="info_container_block">
+            <div class="info_section_left">
+              <img src="img/appartmentsImg/room 3.jpg" alt="Image 3" />
+            </div>
+            <div class="info_section_right">
+              <div class="info_heading_row">
+                <h1 class="info_header">amiryan</h1>
+                <span class="info_street_name">
+                  <a href="#" class="info_street_link">Yerevan</a>
+                  <span class="slesh">/</span>
+                  <a href="#" class="info_street_link">Centre</a>
+                </span>
               </div>
-              <div class="info_section_right">
-                <div class="info_heading_row">
-                  <h1 class="info_header">amiryan</h1>
-                  <span class="info_street_name">
-                    <a href="#" class="info_street_link">Yerevan</a>
-                    <span class="slesh">/</span>
-                    <a href="#" class="info_street_link">Centre</a>
-                  </span>
+              <div class="info_description_row">
+                <div class="description_column_first">
+                  <p class="col_features_title">Features</p>
+                  <ul class="col_features_table">
+                    <li class="col_features_list">3 Bedrooms</li>
+                    <li class="col_features_list">5/3 Floor</li>
+                    <li class="col_features_list">200 sqm</li>
+                    <li class="col_features_list">New Building</li>
+                  </ul>
                 </div>
-                <div class="info_description_row">
-                  <div class="description_column_first">
-                    <p class="col_features_title">Features</p>
-                    <ul class="col_features_table">
-                      <li class="col_features_list">3 Bedrooms</li>
-                      <li class="col_features_list">5/3 Floor</li>
-                      <li class="col_features_list">200 sqm</li>
-                      <li class="col_features_list">New Building</li>
-                    </ul>
-                  </div>
-                  <div class="description_column_second">
-                    <p class="col_title">monthly</p>
-                    <span class="second_col_link_color">4.300</span>
-                    <span>&nbsp;</span>
-                    <span class="price_currency">usd</span>
-                  </div>
-                  <div class="description_column_third">
-                    <p class="col_title">
-                      code:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">RCEA3248</a>
-                      </span>
-                    </p>
-                    <p class="col_title">
-                      updated:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">14.06.2021</a>
-                      </span>
-                    </p>
-                  </div>
+                <div class="description_column_second">
+                  <p class="col_title">monthly</p>
+                  <span class="second_col_link_color">4.300</span>
+                  <span>&nbsp;</span>
+                  <span class="price_currency">usd</span>
                 </div>
-                <div class="description_btn_box">
-                  <button class="description_rent_btn">rent</button>
+                <div class="description_column_third">
+                  <p class="col_title">
+                    code:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">RCEA3248</a>
+                    </span>
+                  </p>
+                  <p class="col_title">
+                    updated:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">14.06.2021</a>
+                    </span>
+                  </p>
                 </div>
+              </div>
+              <div class="description_btn_box">
+                <a href="living.html" rel="noopener noreferrer" class="description_rent_btn">rent</a>
               </div>
             </div>
-            <div class="info_container_block">
-              <div class="info_section_left">
-                <img src="img/appartmentsImg/room 4.jfif" alt="Image 1" />
+          </div>
+
+          <div class="info_container_block">
+            <div class="info_section_left">
+              <img src="img/appartmentsImg/room 4.jfif" alt="Image 1" />
+            </div>
+            <div class="info_section_right">
+              <div class="info_heading_row">
+                <h1 class="info_header">abovyan</h1>
+                <span class="info_street_name">
+                  <a href="#" class="info_street_link">Yerevan</a>
+                  <span class="slesh">/</span>
+                  <a href="#" class="info_street_link">Centre</a>
+                </span>
               </div>
-              <div class="info_section_right">
-                <div class="info_heading_row">
-                  <h1 class="info_header">abovyan</h1>
-                  <span class="info_street_name">
-                    <a href="#" class="info_street_link">Yerevan</a>
-                    <span class="slesh">/</span>
-                    <a href="#" class="info_street_link">Centre</a>
-                  </span>
+              <div class="info_description_row">
+                <div class="description_column_first">
+                  <p class="col_features_title">features</p>
+                  <ul class="col_features_table">
+                    <li class="col_features_list">3 Bedrooms</li>
+                    <li class="col_features_list">5/3 floor</li>
+                    <li class="col_features_list">200 sqm</li>
+                    <li class="col_features_list">New Building</li>
+                  </ul>
                 </div>
-                <div class="info_description_row">
-                  <div class="description_column_first">
-                    <p class="col_features_title">features</p>
-                    <ul class="col_features_table">
-                      <li class="col_features_list">3 Bedrooms</li>
-                      <li class="col_features_list">5/3 floor</li>
-                      <li class="col_features_list">200 sqm</li>
-                      <li class="col_features_list">New Building</li>
-                    </ul>
-                  </div>
-                  <div class="description_column_second">
-                    <p class="col_title">monthly</p>
-                    <span class="second_col_link_color">1.500</span>
-                    <span>&nbsp;</span>
-                    <span class="price_currency">usd</span>
-                  </div>
-                  <div class="description_column_third">
-                    <p class="col_title">
-                      code:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">RCEA3248</a>
-                      </span>
-                    </p>
-                    <p class="col_title">
-                      updated:
-                      <span class="col_title_span">
-                        <a href="#" class="code_update">14.06.2021</a>
-                      </span>
-                    </p>
-                  </div>
+                <div class="description_column_second">
+                  <p class="col_title">monthly</p>
+                  <span class="second_col_link_color">1.500</span>
+                  <span>&nbsp;</span>
+                  <span class="price_currency">usd</span>
                 </div>
-                <div class="description_btn_box">
-                  <button class="description_rent_btn">rent</button>
+                <div class="description_column_third">
+                  <p class="col_title">
+                    code:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">RCEA3248</a>
+                    </span>
+                  </p>
+                  <p class="col_title">
+                    updated:
+                    <span class="col_title_span">
+                      <a href="#" class="code_update">14.06.2021</a>
+                    </span>
+                  </p>
                 </div>
+              </div>
+              <div class="description_btn_box">
+                <a href="living.html" rel="noopener noreferrer" class="description_rent_btn">rent</a>
               </div>
             </div>
           </div>
